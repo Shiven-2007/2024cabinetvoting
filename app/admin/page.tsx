@@ -13,7 +13,7 @@ export default async function Page() {
 		<main>
 			{data.map((element, index) => {
 				return (
-					<div id={index.toString()}>
+					<div id={index.toString()} key={index}>
 						{element.candidateName}
 						{element.houseName}
 						{element.votes}
