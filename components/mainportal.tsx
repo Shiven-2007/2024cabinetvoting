@@ -84,16 +84,16 @@ export default function VoteForm({ house }: { house: string }) {
 					type="text"
 					value={id}
 					onChange={(e) => setId(e.target.value)}
-					required={true}
+					required
 				/>
 			</div>
 			<div className="flex gap-10">
 				<div>
 					Vote 1
 					<RadioGroup
+						value={vote1}
 						onValueChange={(e) => {
 							setVote1(e);
-							console.log(e);
 						}}
 						required
 					>
@@ -114,6 +114,7 @@ export default function VoteForm({ house }: { house: string }) {
 				<div>
 					Vote 2
 					<RadioGroup
+						value={vote2}
 						onValueChange={(e) => {
 							setVote2(e);
 							console.log(e);
@@ -137,6 +138,7 @@ export default function VoteForm({ house }: { house: string }) {
 				<div>
 					Vote 3
 					<RadioGroup
+						value={vote3}
 						onValueChange={(e) => {
 							setVote3(e);
 							console.log(e);
