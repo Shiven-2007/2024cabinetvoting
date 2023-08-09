@@ -1,6 +1,5 @@
 "use client";
 import { Label } from "@/components/ui/label";
-import {useRouter} from ""
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,6 @@ import { useState } from "react";
 import axios from "axios";
 
 export default function VoteForm({ house }: { house: string }) {
-	const router = useRouter()
 	const [id, setId] = useState("");
 	const [vote1, setVote1] = useState("");
 	const [vote2, setVote2] = useState("");
@@ -34,7 +32,6 @@ export default function VoteForm({ house }: { house: string }) {
 				setVote2("");
 				setVote3("");
 				setId("");
-				router.refresh()
 			} catch (error) {
 				setMessage("An error occurred while submitting the vote." + error);
 			}
